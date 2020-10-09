@@ -1,0 +1,24 @@
+spring:
+  cloud:
+    stream:
+      kafka:
+        binder:
+          brokers: localhost
+          zkNodes: localhost
+      bindings:
+        input:
+          consumer:
+            headerMode: raw
+            group: messageGroup
+            resetOffsets: true
+        output:
+          producer:
+            headerMode: raw
+          destination: prodcas
+          content-type: application/octet-stream
+          group: group
+
+server:
+  port: 8091
+  servlet:
+    context-path: /xeskafka-producer
