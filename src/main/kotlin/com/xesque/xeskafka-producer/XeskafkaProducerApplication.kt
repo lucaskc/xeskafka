@@ -1,11 +1,11 @@
-package com.xesque.xeskafka
+package com.xesque.`xeskafka-producer`
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
 
 @SpringBootApplication
-class XeskafkaApplication
+class XeskafkaProducerApplication
 
 fun main(args: Array<String>) {
-    runApplication<XeskafkaApplication>(*args)
+    runApplication<XeskafkaProducerApplication>(*args)
 }
