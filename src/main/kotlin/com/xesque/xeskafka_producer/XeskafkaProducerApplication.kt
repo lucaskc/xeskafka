@@ -1,4 +1,4 @@
-package com.xesque.`xeskafka-producer`
+package com.xesque.xeskafka_producer
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication

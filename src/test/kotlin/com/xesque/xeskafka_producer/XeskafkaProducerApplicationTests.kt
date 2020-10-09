@@ -1,4 +1,4 @@
-package com.xesque.`xeskafka-producer`
+package com.xesque.xeskafka_producer
 
 import org.junit.jupiter.api.Test
 import org.springframework.boot.test.context.SpringBootTest
