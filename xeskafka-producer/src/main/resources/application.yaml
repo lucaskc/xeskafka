@@ -8,14 +8,21 @@ spring:
           useNativeEncoding: true
       bindings:
         input:
-          destination: employee-details
+          destination: xesque-details
           content-type: application/json
           group: group-1
           concurrency: 3
+          auto-offset-reset: earliest
         output:
-          destination: employee-details
+          destination: xesque-details
           content-type: application/json
+
+      kafka:
+        binder:
+          autoCreateTopics: true
+
 server:
   port: 8091
   servlet:
     context-path: /xeskafka-producer
+
