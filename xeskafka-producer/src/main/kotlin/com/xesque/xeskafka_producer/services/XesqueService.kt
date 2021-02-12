@@ -25,7 +25,7 @@ class XesqueService: XesqueServiceDefinition {
 
         val dataString = mapper.writeValueAsString(data)
 
-        val map = hashMapOf(MessageHeaders.CONTENT_TYPE to "application/octet-stream") as Map<String, Any>
+        val map = hashMapOf(MessageHeaders.CONTENT_TYPE to "application/json") as Map<String, Any>
 
         val datatByte = mapper.writeValueAsBytes(dataString)
 

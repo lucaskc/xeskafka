@@ -1,23 +1,20 @@
 spring:
   cloud:
     stream:
-      kafka:
-        binder:
-          brokers: localhost
-          zkNodes: localhost
+      default:
+        producer:
+          useNativeEncoding: true
+        consumer:
+          useNativeEncoding: true
       bindings:
         input:
-          consumer:
-            headerMode: raw
-            group: messageGroup
-            resetOffsets: true
+          destination: employee-details
+          content-type: application/json
+          group: group-1
+          concurrency: 3
         output:
-          producer:
-            headerMode: raw
-          destination: prodcas
-          content-type: application/octet-stream
-          group: group
-
+          destination: employee-details
+          content-type: application/json
 server:
   port: 8091
   servlet:
