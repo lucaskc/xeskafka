@@ -20,5 +20,6 @@ class XesqueController {
     fun postXesque(@RequestBody xesque: Xesque): Xesque {
         xesqueService.sendXesque(xesque)
         return xesque
+
     }
 }
